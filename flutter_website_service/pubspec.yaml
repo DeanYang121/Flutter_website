@@ -1,0 +1,6 @@
+name: flutter_site_service
+description: Flutter实战
+
+dependencies:
+  http_server: ^0.9.8
+  
