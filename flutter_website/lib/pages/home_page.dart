@@ -31,6 +31,23 @@ class _HomeState extends State<HomePage>{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+            appBar: AppBar(
+        title: Text("企业站实战"),
+        leading: Icon(Icons.home),
+        actions: <Widget>[
+          Padding(
+            padding:EdgeInsets.only(right: 20.0),
+            child: GestureDetector(
+              onTap: (){},
+              child: Icon(Icons.search),
+            ),
+
+          ),
+
+        ],
+
+      ),
+
       body: ListView(
         children: <Widget>[
           BannerWidget(),

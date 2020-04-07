@@ -29,6 +29,10 @@ void getNewsList()async{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      appBar: AppBar(
+        title: Text("新闻"),
+      ),
+
       body:ListView.separated(
         scrollDirection: Axis.vertical,
         separatorBuilder: (BuildContext context,int index) => Divider(height:1.0,color:Colors.grey), 

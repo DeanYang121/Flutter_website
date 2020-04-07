@@ -29,7 +29,13 @@ void getProductList()async{
 
   Widget build(BuildContext context) {
     // TODO: implement build
-    return ProductResultListPage(listData,getNextPage:()=> getProductList());
+    return Scaffold(
+       appBar: AppBar(
+        title: Text("产品"),
+      ),
+
+      body: ProductResultListPage(listData,getNextPage:()=> getProductList()),
+    );
   }
 
 

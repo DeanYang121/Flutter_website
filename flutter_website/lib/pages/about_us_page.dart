@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'about_contact_page.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+
 class AboutusPage extends StatefulWidget{
   @override
   _AboutusState createState() => _AboutusState();
@@ -11,6 +13,10 @@ class _AboutusState extends State<AboutusPage>{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+            appBar: AppBar(
+        title: Text("关于我们"),
+      ),
+
       body: Container(
         color:Colors.white,
         child: Column(
@@ -22,8 +28,23 @@ class _AboutusState extends State<AboutusPage>{
             leading: Icon(Icons.message),
             title: Text("公司介绍"),
             onTap: (){
-              Navigator.of(context).pushReplacementNamed("company_info");
-            }
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) => WebviewScaffold(
+                        url: "https://www.baidu.com",
+      appBar: AppBar(
+        title: Text("公司介绍"),
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: (){
+              
+              Navigator.pop(context);
+            }),
+      ),
+
+                )
+                ));
+              
+           }
             ),
             Divider(
               height: 10,
